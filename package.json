@@ -1,7 +1,7 @@
 {
   "name": "web-last-block",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Требования к проекту",
   "keywords": [
     "web",
     "scss",
@@ -53,5 +53,14 @@
     "plugins": {
       "autoprefixer": {}
     }
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clio-mask/Final1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clio-mask/Final1/issues"
+  },
+  "homepage": "https://github.com/clio-mask/Final1#readme"
 }
