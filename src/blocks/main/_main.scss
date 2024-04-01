@@ -1,0 +1,139 @@
+.main {
+  &__wrapper {
+    padding: 24px 0 0;
+    @media screen and (min-width: 768px) {
+      padding: 24px 24px 0;
+    }
+    @media screen and (min-width: 1360px) {
+      padding: 24px 32px 0;
+      position: relative;
+    }
+  }
+  &__title {
+    font-size: 28px;
+    color: $text;
+    letter-spacing: -0.6px;
+    margin: 0 16px;
+  }
+
+  &__title::before {
+    content: '';
+    width: 4px;
+    height: 40px;
+    background: $lime_color;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+  }
+  &__service-list {
+    padding: 0;
+    margin: 24px 0;
+    gap: $common_gap;
+    display: flex;
+    @media screen and (min-width: 768px) {
+      margin: 24px -16px 32px;
+    }
+    @media screen and (min-width: 1360px) {
+      overflow: initial;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 24px 0 16px;
+    }
+  }
+
+  &__service-list::after {
+    content: ' ';
+    height: 40px;
+    width: 24px;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+  &__picture-block-text {
+    padding: 0 16px 16px;
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &__text-item {
+    font-size: 14px;
+    line-height: 18px;
+    color: $text;
+    letter-spacing: 0.2px;
+    @media screen and (min-width: 768px) {
+      line-height: 20px;
+      margin-top: 0;
+    }
+  }
+
+  &__text-item--hidden {
+    display: none;
+  }
+
+  &__read-more-button {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-family: 'TT Lakes', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__read-more-button::before {
+    content: '';
+    width: 8px;
+    height: 11px;
+    background-size: contain;
+    background: url('../img/arrows.svg') no-repeat;
+    cursor: pointer;
+  }
+
+  &__picture-block-img {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      border-radius: 5px;
+      width: 47%;
+    }
+  }
+
+  &__button-block {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__text-item--hidden:nth-child(2) {
+      display: block;
+    }
+    &__picture-block {
+      display: flex;
+      gap: 48px;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    &__text-item--hidden:nth-child(3) {
+      display: block;
+    }
+
+    &__text-item--hidden:nth-child(2) {
+      display: none;
+    }
+    &__title-block {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__button-block {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+}

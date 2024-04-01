@@ -1,0 +1,82 @@
+%header-parts {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+    background-color: $bgColor;
+  }
+  &__left-part {
+    @extend %header-parts;
+  }
+  &__tablet {
+    display: flex;
+    gap: $common_gap;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__support {
+    background: url('../img/support.svg') $pink_color no-repeat center;
+  }
+
+  &__search {
+    background: url('../img/search.svg') $pink_color no-repeat center;
+  }
+  &__phone {
+    background: url('../img/phone.svg') $pink_color no-repeat center;
+  }
+
+  &__message {
+    background: url('../img/message.svg') $pink_color no-repeat center;
+  }
+
+  &__personal {
+    background: url('../img/personal.svg') $pink_color no-repeat center;
+  }
+
+  &__middle-part {
+    display: none;
+    @extend %header-parts;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: $common_gap;
+    }
+  }
+  &__right-part {
+    @extend %header-parts;
+  }
+  &__right-part::before {
+    content: '';
+    height: 32px;
+    width: 2px;
+    background-color: #eaeaea;
+  }
+  &__menu {
+    background: url('../img/menu.svg') $pink_color no-repeat center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $common_gap;
+  }
+  &__logo::before {
+    @media screen and (min-width: 768px) {
+      content: '';
+      height: 32px;
+      width: 2px;
+      background-color: #eaeaea;
+      display: inline;
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    display: none;
+  }
+}

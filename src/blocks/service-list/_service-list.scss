@@ -1,0 +1,31 @@
+@import 'variables';
+
+.service-list {
+  list-style: none;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item:first-child {
+    margin-left: 16px;
+    @media screen and (min-width: 1120px) {
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    white-space: nowrap;
+    padding: 8px 16px;
+    margin: 0 -16px 0 0;
+    color: #7e7e82;
+    letter-spacing: -0.2px;
+    text-align: center;
+  }
+
+  &__item--active {
+    background-color: $bgColor;
+    border: 2px solid $lime_color;
+    border-radius: 5px;
+  }
+}
