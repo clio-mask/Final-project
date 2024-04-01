@@ -1,5 +1,4 @@
 .menu {
-  box-shadow: 16px 0px 52px 0px #0e185033;
   &__button {
     background: url(../img/close.svg) $pink_color no-repeat center;
     display: none;
@@ -108,5 +107,8 @@
 
   &__bottom-part {
     align-self: flex-end;
+  }
+  @media screen and (max-width: 1360px) {
+    box-shadow: 16px 0px 52px 0px #0e185033;
   }
 }
