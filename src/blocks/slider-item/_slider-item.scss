@@ -1,0 +1,21 @@
+.slider-item {
+  background: $bgColor;
+  border: 1px solid #eaeaea;
+  width: 78%;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  @media screen and (min-width: 450px) {
+    width: 100%;
+  }
+
+  &::after {
+    content: '';
+    background: url(../img/arrow.svg) no-repeat center;
+    width: 8px;
+    height: 13px;
+    border: 2px solid $pink_color;
+    border-radius: 100%;
+    padding: 11px 14px;
+  }
+}

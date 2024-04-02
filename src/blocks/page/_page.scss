@@ -12,16 +12,13 @@
   }
   &__menu {
     width: 320px;
-    padding: 18px 24px;
     box-sizing: border-box;
     left: 0;
     display: none;
-    height: 100%;
-    grid-template-rows: 60px 1fr 1fr;
-    gap: 20px;
     box-sizing: border-box;
     background: $bgColor;
   }
+
   &__menu {
     display: none;
     @media screen and (min-width: 1360px) {

@@ -1,11 +1,20 @@
 .menu {
+  &__wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 60px 1fr 1fr;
+    gap: 20px;
+    position: fixed;
+    width: 276px;
+    padding: 18px 24px;
+  }
   &__button {
     background: url(../img/close.svg) $pink_color no-repeat center;
     display: none;
   }
 
   &__search {
-    background: url(../img/search.svg) $pink_color no-repeat center;
+    background: url(../img/menu_search.svg) $pink_color no-repeat center;
     justify-self: flex-end;
   }
 
@@ -24,7 +33,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 16px;
+    margin: 24px 0;
   }
 
   &__link {
@@ -88,7 +97,7 @@
   &__item::before {
     content: '';
     width: 4px;
-    height: 32px;
+    height: 24px;
     background: $lime_color;
     position: absolute;
     left: 0;
@@ -104,10 +113,11 @@
   &__lang-item:hover {
     filter: opacity(0.5);
   }
-
   &__bottom-part {
     align-self: flex-end;
+    margin-bottom: 40px;
   }
+
   @media screen and (max-width: 1360px) {
     box-shadow: 16px 0px 52px 0px #0e185033;
   }

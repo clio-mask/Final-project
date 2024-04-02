@@ -54,7 +54,9 @@
       "autoprefixer": {}
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^11.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clio-mask/Final1.git"
