@@ -65,14 +65,14 @@
     line-height: 18px;
     color: $text;
     letter-spacing: 0.2px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     @media screen and (min-width: 768px) {
       line-height: 20px;
       margin-top: 0;
     }
-  }
-
-  &__text-item--hidden {
-    display: none;
   }
 
   &__read-more-button {
@@ -110,22 +110,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    &__text-item--hidden:nth-child(2) {
-      display: block;
-    }
     &__picture-block {
       display: flex;
       gap: 48px;
     }
   }
   @media screen and (min-width: 1360px) {
-    &__text-item--hidden:nth-child(3) {
-      display: block;
-    }
-
-    &__text-item--hidden:nth-child(2) {
-      display: none;
-    }
     &__title-block {
       display: flex;
       justify-content: space-between;

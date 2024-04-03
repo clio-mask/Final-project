@@ -1,16 +1,33 @@
 .menu {
   &__wrapper {
+    height: 100vh;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
     display: grid;
-    height: 100%;
-    grid-template-rows: 60px 1fr 1fr;
     gap: 20px;
     position: fixed;
-    width: 276px;
-    padding: 18px 24px;
+    background: $bgColor;
+    z-index: 100;
+    @media screen and (min-width: 420px) {
+      width: 320px;
+    }
+    @media screen and (min-width: 1360px) {
+      height: 100%;
+      grid-template-rows: 60px 1fr 1fr;
+      width: 276px;
+      padding: 18px 24px;
+    }
+    @media screen and (max-width: 1360px) {
+      box-shadow: 16px 0px 52px 0px #0e185033;
+    }
   }
   &__button {
     background: url(../img/close.svg) $pink_color no-repeat center;
-    display: none;
+    display: block;
+    @media screen and (min-width: 1360px) {
+      display: none;
+    }
   }
 
   &__search {
@@ -19,11 +36,16 @@
   }
 
   &__top-part {
+    margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 40px 1fr 40px;
+
     align-items: center;
     gap: 16px;
-    margin-bottom: 45px;
+    @media screen and (min-width: 1360px) {
+      margin-bottom: 45px;
+      grid-template-columns: 100px 1fr;
+    }
   }
 
   &__list {
@@ -33,7 +55,10 @@
   }
 
   &__item:not(:last-child) {
-    margin: 24px 0;
+    margin: 18px 0;
+    @media screen and (min-width: 1360px) {
+      margin: 24px 0;
+    }
   }
 
   &__link {
@@ -117,8 +142,7 @@
     align-self: flex-end;
     margin-bottom: 40px;
   }
-
-  @media screen and (max-width: 1360px) {
-    box-shadow: 16px 0px 52px 0px #0e185033;
+  &--open {
+    display: block;
   }
 }
