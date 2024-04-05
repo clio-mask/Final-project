@@ -5,4 +5,35 @@
   border-radius: 100%;
   border: none;
   cursor: pointer;
+  &:hover {
+    filter: brightness(0.95);
+  }
+  &--arrowed-button {
+    text-transform: uppercase;
+    color: $bgColor;
+    border: none;
+    background: $pink_color;
+    padding: 10px 15px 10px 12px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    width: fit-content;
+    transition-duration: 0.25s;
+  }
+  &--arrowed-button:hover {
+    color: $text;
+  }
+  &--arrowed-button:hover::after {
+    filter: invert(1);
+  }
+  &--arrowed-button::after {
+    content: '';
+    width: 8px;
+    height: 13px;
+    background: url(../img/arrow_white.svg) no-repeat center;
+    transition-duration: 0.25s;
+  }
 }

@@ -90,8 +90,11 @@
     text-decoration: none;
     color: $text;
     margin-bottom: 12px;
+    transition-duration: 0.25s;
   }
-
+  &__mail:hover {
+    color: $gray_text;
+  }
   &__phone {
     display: block;
     text-decoration: none;

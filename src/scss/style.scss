@@ -14,6 +14,10 @@
 @import '../blocks/title/title';
 @import '../blocks/types/types';
 @import '../blocks/slider-item/slider-item';
+@import '../blocks/prices/prices';
+@import '../blocks/swiper-slide/swiper-slide';
+@import '../blocks/footer/footer';
+@import '../blocks/modal/modal';
 @import '../blocks/show-more-button/show-more-button';
 @import '../blocks/swiper-pagination/swiper-pagination';
 
@@ -38,26 +42,20 @@
     url('../fonts/TTLakes-Bold.woff') format('truetype');
 }
 
-.swiper__brand-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 10px 16px;
-
-  min-height: 72px;
-}
-
-@media screen and (min-width: 450px) {
-  .swiper__brand-item {
-    width: 100%;
-  }
-  .swiper__brand-logo {
-    max-width: 100px;
-  }
-}
-.swiper-slide--hidden {
-  @media screen and (min-width: 768px) {
-    display: none !important;
+%slider-shadow {
+  content: ' ';
+  height: 80%;
+  width: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+  z-index: 100;
+  @media screen and (min-width: 450px) {
+    display: none;
   }
 }

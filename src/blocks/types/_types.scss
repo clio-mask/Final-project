@@ -1,4 +1,5 @@
 .types {
+  margin-bottom: 50px;
   &__wrapper {
     @media screen and (min-width: 450px) {
       padding: 0 16px;
@@ -13,12 +14,7 @@
       gap: 24px;
     }
   }
-  &__title {
-    padding: 0 16px;
-    @media screen and (min-width: 768px) {
-      padding: 0;
-    }
-  }
+
   &__swiper {
     height: 200px;
 
@@ -42,21 +38,7 @@
     }
   }
   &__swiper::after {
-    content: ' ';
-    height: 75px;
-    width: 24px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: linear-gradient(
-      270deg,
-      #f8f8f8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
-    z-index: 100;
-    @media screen and (min-width: 450px) {
-      display: none;
-    }
+    @extend %slider-shadow;
   }
   &__item-title {
     width: 100%;

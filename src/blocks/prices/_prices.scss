@@ -1,0 +1,122 @@
+.prices {
+  &__swiper {
+    height: 250px;
+  }
+  &__table-title {
+    display: grid;
+    grid-template-columns: 48% 16% 17% 17%;
+    padding: 0 24px;
+    @media screen and (min-width: 1100px) {
+      grid-template-columns: 54% 16% 16% 12%;
+    }
+  }
+  &__table {
+    @media screen and (min-width: 450px) {
+      background: $bgColor;
+      padding: 0 16px 16px;
+      margin: 16px 0 30px;
+      border-radius: 5px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 24px 24px;
+    }
+  }
+  &__item {
+    padding: 16px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 14px;
+    color: $text;
+    @media screen and (min-width: 768px) {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: 48% 16% 17% 17%;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid $border_color;
+      gap: 5px;
+    }
+    @media screen and (min-width: 1100px) {
+      grid-template-columns: 54% 16% 16% 12%;
+    }
+  }
+  &__item:last-child {
+    border: none;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__column:last-child {
+    @media screen and (min-width: 768px) {
+      justify-self: center;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &--desktop {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  &--mobile {
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__swiper-slide:first-child {
+    margin-left: 16px;
+  }
+  &__item-block:last-child {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__swiper::after {
+    @extend %slider-shadow;
+  }
+  & .slider-item {
+    width: 78%;
+    @media screen and (min-width: 450px) {
+      width: 89%;
+    }
+  }
+  &__descr {
+    padding: 0 16px;
+    font-size: 14px;
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
+  }
+  &__offer {
+    padding: 0 16px;
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
+  }
+  &__offer::after {
+    content: '';
+    background: url(../img/arrow.svg) no-repeat center;
+    width: 8px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition-duration: 0.25s;
+  }
+  &__offer:hover::after {
+    filter: invert(1);
+  }
+}

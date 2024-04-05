@@ -1,4 +1,5 @@
 .brands {
+  margin-bottom: 50px;
   &__wrapper {
     @media screen and (min-width: 450px) {
       padding: 0 16px;
@@ -30,21 +31,7 @@
   }
 
   &__swiper::after {
-    content: ' ';
-    height: 75px;
-    width: 24px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: linear-gradient(
-      270deg,
-      #f8f8f8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
-    z-index: 100;
-    @media screen and (min-width: 450px) {
-      display: none;
-    }
+    @extend %slider-shadow;
   }
   &__show-more-button {
     display: none;
@@ -68,6 +55,20 @@
     @media screen and (min-width: 1360px) {
       width: 22%;
       flex-grow: 1;
+    }
+  }
+  &__swiper-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    min-height: 72px;
+    @media screen and (min-width: 450px) {
+      width: 100%;
+    }
+
+    &__swiper-logo {
+      max-width: 100px;
     }
   }
 }

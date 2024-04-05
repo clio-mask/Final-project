@@ -1,9 +1,10 @@
 .slider-item {
   background: $bgColor;
-  border: 1px solid #eaeaea;
+  border: 1px solid $border_color;
   width: 78%;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
 
   @media screen and (min-width: 450px) {
     width: 100%;
@@ -17,5 +18,12 @@
     border: 2px solid $pink_color;
     border-radius: 100%;
     padding: 11px 14px;
+    transition-duration: 0.25s;
+  }
+  .prices &::after {
+    display: none;
+  }
+  &:hover::after {
+    background: url(../img/arrow_white.svg) $pink_color no-repeat center;
   }
 }

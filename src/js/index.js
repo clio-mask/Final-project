@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   resizableSwiper('(max-width: 450px)', '.brands__swiper', {
     loop: true,
     spaceBetween: -60,
-    brandSlidesPerView: 1,
+    slidesPerView: 1,
     pagination: {
       el: '.brands__swiper-pagination',
       clickable: true
@@ -39,10 +39,29 @@ window.addEventListener('DOMContentLoaded', () => {
     resizableSwiper('(max-width: 450px)', '.types__swiper', {
       loop: true,
       spaceBetween: -60,
-      brandSlidesPerView: 1,
+      slidesPerView: 1,
       pagination: {
         el: '.types__swiper-pagination',
         clickable: true
+      },
+      modules: [Pagination]
+    }),
+    resizableSwiper('(max-width: 767px)', '.prices__swiper', {
+      loop: true,
+      spaceBetween: -60,
+      pagination: {
+        el: '.prices__swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+
+        450: {
+          slidesPerView: 2,
+          spaceBetween: -20
+        }
       },
       modules: [Pagination]
     })
@@ -160,6 +179,14 @@ let menuButton = document.querySelector('.header__menu')
 let menu = document.querySelector('.menu')
 let closeButton = document.querySelector('.menu__button')
 let modalShadow = document.querySelector('.page__modal-bg')
+let modalFeedback = document.querySelector('.page__feedback')
+let headerMessage = document.querySelector('.header__message')
+let menuMessage = document.querySelector('.menu__message')
+let menuCall = document.querySelector('.menu__call')
+let headerCall = document.querySelector('.header__phone')
+let modalCloseFeedback = document.querySelector('.modal-feedback')
+let modalCloseCallback = document.querySelector('.modal-callback')
+let modalCallback = document.querySelector('.page__callback')
 
 menuButton.addEventListener('click', function () {
   menu.classList.add('menu--open')
@@ -173,5 +200,39 @@ closeButton.addEventListener('click', () => {
 
 modalShadow.addEventListener('click', () => {
   menu.classList.remove('menu--open')
+  modalFeedback.classList.remove('modal--open')
+  modalCallback.classList.remove('modal--open')
   modalShadow.style.display = 'none'
+})
+
+headerMessage.addEventListener('click', () => {
+  modalFeedback.classList.add('modal--open')
+  modalShadow.style.display = 'block'
+})
+
+menuMessage.addEventListener('click', () => {
+  menu.classList.remove('menu--open')
+  modalShadow.style.display = 'block'
+  modalFeedback.classList.add('modal--open')
+})
+
+modalCloseFeedback.addEventListener('click', () => {
+  modalFeedback.classList.remove('modal--open')
+  modalShadow.style.display = 'none'
+})
+
+modalCloseCallback.addEventListener('click', () => {
+  modalCallback.classList.remove('modal--open')
+  modalShadow.style.display = 'none'
+})
+
+headerCall.addEventListener('click', () => {
+  modalCallback.classList.add('modal--open')
+  modalShadow.style.display = 'block'
+})
+
+menuCall.addEventListener('click', () => {
+  menu.classList.remove('menu--open')
+  modalShadow.style.display = 'block'
+  modalCallback.classList.add('modal--open')
 })
