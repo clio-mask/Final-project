@@ -742,7 +742,8 @@ template {
     background: #fff; }
     @media screen and (min-width: 1360px) {
       .page__menu {
-        display: block; } }
+        display: block;
+        z-index: 80; } }
   .page__modal-bg {
     position: fixed;
     width: 100%;
