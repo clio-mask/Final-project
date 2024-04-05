@@ -19,6 +19,7 @@
     background: $bgColor;
     @media screen and (min-width: 1360px) {
       display: block;
+      z-index: 80;
     }
   }
   &__modal-bg {
